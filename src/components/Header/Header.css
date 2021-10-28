@@ -1,7 +1,12 @@
+.header-container{
+    background-color: #212531;
+    padding: 10px 0px;
+}
+
 .navLink{
     text-decoration: none;
     font-weight: 600;
-    color: black;
+    color: whitesmoke;
     margin: 10px;
     padding: 10px;
 }
