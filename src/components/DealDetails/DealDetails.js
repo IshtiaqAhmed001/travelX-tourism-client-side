@@ -8,7 +8,7 @@ import useAuth from '../../hooks/useAuth';
 const DealDetails = () => {
     const { id } = useParams();
     const { deals } = useDeals();
-    const serviceId = id;
+    const orderId = id;
 
     const singleDeal = deals.filter(deal => deal._id === id);
 
@@ -18,9 +18,11 @@ const DealDetails = () => {
 
     const onSubmit = data => {
         const { name, email, address, city, phone } = data;
-        const newOrder = { serviceId, name, email, address, city, phone };
 
-        fetch('http://localhost:5000/orders', {
+        let newOrder = { orderId, name, email, address, city, phone };
+        newOrder.itemDetails = singleDeal[0];
+
+        fetch('http://localhost:5000/bookings', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

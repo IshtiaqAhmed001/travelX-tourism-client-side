@@ -14,6 +14,7 @@ import DealDetails from './components/DealDetails/DealDetails';
 import AuthProvider from './components/context/AuthProvider';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import AddNewDeal from './components/AddNewDeal/AddNewDeal';
+import MyBookings from './components/MyBookings/MyBookings';
 
 
 function App() {
@@ -41,6 +42,9 @@ function App() {
             </Route>
             <Route path="/addnewdeal">
               <AddNewDeal></AddNewDeal>
+            </Route>
+            <Route path="/mybookings">
+              <MyBookings></MyBookings>
             </Route>
             <Route path="/login">
               <Login></Login>
