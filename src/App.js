@@ -13,6 +13,7 @@ import Register from './components/Register/Register';
 import DealDetails from './components/DealDetails/DealDetails';
 import AuthProvider from './components/context/AuthProvider';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import AddNewDeal from './components/AddNewDeal/AddNewDeal';
 
 
 function App() {
@@ -38,7 +39,9 @@ function App() {
             <Route path="/deals">
               <Deals></Deals>
             </Route>
-
+            <Route path="/addnewdeal">
+              <AddNewDeal></AddNewDeal>
+            </Route>
             <Route path="/login">
               <Login></Login>
             </Route>

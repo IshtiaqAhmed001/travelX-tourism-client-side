@@ -18,10 +18,12 @@ const Deal = ({ deal }) => {
             </div>
             <h3>{name}</h3>
             <h6>{destination}</h6>
-            <button onClick={() => handleViewDetails(_id)} className="btn btn-primary">View Details</button>
+            <button onClick={() => handleViewDetails(_id)} className="btn btn-primary">Book Now</button>
             <p>Price: {price}</p>
         </div>
+
     );
 };
+
 
 export default Deal;

@@ -19,7 +19,7 @@ const Header = () => {
                             <NavLink className="navLink" to="/home">Home</NavLink>
                             <NavLink className="navLink" to="/destinations">Destinations</NavLink>
                             <NavLink className="navLink" to="/deals">Deals</NavLink>
-                            <NavLink className="navLink" to="/about">About</NavLink>
+                            <NavLink className="navLink" to="/addnewdeal">Add a New Deal</NavLink>
 
                             {/* display user name and Logout button if looged in  */}
                             {
