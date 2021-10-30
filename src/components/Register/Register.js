@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import { useHistory, useLocation } from 'react-router-dom';
+import { Link, useHistory, useLocation } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 
 
@@ -50,19 +50,19 @@ const Register = () => {
     }
 
 
-    // sign in using google directly
-    const handleGoogleSignIn = () => {
-        signInWithGoogle()
-            .then(res => {
-                setIsLoading(true);
-                setUser(res.user);
-                history.push(url);
-            })
-            .catch(err => console.log(err))
-            .finally(() => {
-                setIsLoading(false);
-            })
-    }
+    // // sign in using google directly
+    // const handleGoogleSignIn = () => {
+    //     signInWithGoogle()
+    //         .then(res => {
+    //             setIsLoading(true);
+    //             setUser(res.user);
+    //             history.push(url);
+    //         })
+    //         .catch(err => console.log(err))
+    //         .finally(() => {
+    //             setIsLoading(false);
+    //         })
+    // }
     return (
         <div>
             <h2 className="my-5">Please Register</h2>
@@ -77,8 +77,10 @@ const Register = () => {
                     <input type="submit" value="Register" />
                 </form>
             </div>
-            <h3 className="mt-5">Already Registered ?</h3>
-            <button onClick={handleGoogleSignIn} className="btn btn-success">Google Sign In</button>
+            <div className="mb-5">
+                <h3 className="mt-5">Already Registered ?</h3>
+                <Link to="/login">Please Login</Link>
+            </div>
 
         </div>
     );
