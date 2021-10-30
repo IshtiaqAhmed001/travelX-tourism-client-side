@@ -12,8 +12,24 @@ const MyBookings = () => {
             .then(data => setOrders(data));
     }, []);
 
-
     const myBookings = orders.filter(order => order.email === user.email);
+
+    // cancel booking 
+    const handleCancelBooking = id => {
+
+        const url = `http://localhost:5000/bookings/${id}`;
+        fetch(url, {
+            method: 'DELETE'
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.deletedCount > 0) {
+                    alert('Booking canceled!');
+                    window.location.reload();
+                }
+            })
+
+    }
 
     return (
         <div>
@@ -29,7 +45,7 @@ const MyBookings = () => {
                     <h6>{booking.itemDetails.destination}</h6>
 
                     <p>Price: {booking.itemDetails.price}</p>
-
+                    <button onClick={() => handleCancelBooking(booking._id)} className="btn btn-warning fw-bold"><h3>Cancel Booking</h3></button>
                 </div>)}
             </div>
         </div>
