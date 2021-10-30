@@ -1,12 +1,23 @@
 import React, { useEffect, useState } from 'react';
+import { Spinner } from 'react-bootstrap';
+import useAuth from '../../hooks/useAuth';
 
 const Destinations = () => {
     const [destinations, setDestinations] = useState([]);
+    const { isLoading } = useAuth();
     useEffect(() => {
         fetch('http://localhost:5000/destinations')
             .then(res => res.json())
             .then(data => setDestinations(data))
     }, []);
+
+    if (isLoading) {
+        return <div class="text-center">
+            <Spinner animation="border" role="status">
+                <span className="visually-hidden">Loading...</span>
+            </Spinner>
+        </div>
+    }
 
     return (
         <div className="container">
