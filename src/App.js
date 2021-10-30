@@ -34,18 +34,18 @@ function App() {
             <Route path="/destinations">
               <Destinations></Destinations>
             </Route>
-            <PrivateRoute path="/deals/details/:id">
+            <PrivateRoute path="/deals/placeorder/:id">
               <DealDetails></DealDetails>
             </PrivateRoute>
             <Route path="/deals">
               <Deals></Deals>
             </Route>
-            <Route path="/addnewdeal">
+            <PrivateRoute path="/addnewdeal">
               <AddNewDeal></AddNewDeal>
-            </Route>
-            <Route path="/mybookings">
+            </PrivateRoute>
+            <PrivateRoute path="/mybookings">
               <MyBookings></MyBookings>
-            </Route>
+            </PrivateRoute>
             <Route path="/login">
               <Login></Login>
             </Route>

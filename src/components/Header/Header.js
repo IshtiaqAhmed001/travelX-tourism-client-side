@@ -19,12 +19,15 @@ const Header = () => {
                             <NavLink className="navLink" to="/home">Home</NavLink>
                             <NavLink className="navLink" to="/destinations">Destinations</NavLink>
                             <NavLink className="navLink" to="/deals">Deals</NavLink>
-                            <NavLink className="navLink" to="/addnewdeal">Add a New Deal</NavLink>
-                            <NavLink className="navLink" to="/mybookings">My Bookings</NavLink>
+
 
                             {/* display user name and Logout button if looged in  */}
                             {
-                                user.displayName && <button className="user-name text-warning" >{user.displayName}</button>
+                                user.displayName && <Nav>
+                                    <NavLink className="navLink" to="/addnewdeal">Add a New Deal</NavLink>
+                                    <NavLink className="navLink" to="/mybookings">My Bookings</NavLink>
+                                    <button className="user-name text-warning" >{user.displayName}</button>
+                                </Nav>
                             }
                             {
                                 user.email ? <button className="nav-button" onClick={logOut}>Log Out</button>

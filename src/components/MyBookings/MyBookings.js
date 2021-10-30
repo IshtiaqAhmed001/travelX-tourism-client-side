@@ -9,7 +9,11 @@ const MyBookings = () => {
         fetch('http://localhost:5000/bookings')
             .then(res => res.json())
             .then(data => setOrders(data));
-    }, [])
+    }, []);
+
+
+
+
 
 
     return (

@@ -7,7 +7,7 @@ const Deal = ({ deal }) => {
     const { _id, name, price, destination, img } = deal;
 
     const handleViewDetails = id => {
-        const url = `/deals/details/${id}`;
+        const url = `/deals/placeorder/${id}`;
         history.push(url);
 
     }
