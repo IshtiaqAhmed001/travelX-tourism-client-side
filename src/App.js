@@ -15,6 +15,7 @@ import AuthProvider from './components/context/AuthProvider';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import AddNewDeal from './components/AddNewDeal/AddNewDeal';
 import MyBookings from './components/MyBookings/MyBookings';
+import ManageAllBookings from './components/ManageAllBookings/ManageAllBookings';
 
 
 function App() {
@@ -45,6 +46,9 @@ function App() {
             </PrivateRoute>
             <PrivateRoute path="/mybookings">
               <MyBookings></MyBookings>
+            </PrivateRoute>
+            <PrivateRoute path="/manageallbookings">
+              <ManageAllBookings></ManageAllBookings>
             </PrivateRoute>
             <Route path="/login">
               <Login></Login>

@@ -1,34 +1,30 @@
 import React from 'react';
-import { useEffect } from 'react';
-import { useState } from 'react';
 import useAuth from '../../hooks/useAuth';
+import useOrders from '../../hooks/useOrders';
 
 const MyBookings = () => {
     const { user } = useAuth();
-    const [orders, setOrders] = useState([]);
-    useEffect(() => {
-        fetch('http://localhost:5000/bookings')
-            .then(res => res.json())
-            .then(data => setOrders(data));
-    }, []);
+    const { orders, setOrders } = useOrders();
 
+    // filtering only specific user's orders
     const myBookings = orders.filter(order => order.email === user.email);
 
     // cancel booking 
     const handleCancelBooking = id => {
-
-        const url = `http://localhost:5000/bookings/${id}`;
-        fetch(url, {
-            method: 'DELETE'
-        })
-            .then(res => res.json())
-            .then(data => {
-                if (data.deletedCount > 0) {
-                    alert('Booking canceled!');
-                    window.location.reload();
-                }
+        const proceed = window.confirm('Are you sure you want to delete ?');
+        if (proceed) {
+            const url = `http://localhost:5000/bookings/${id}`;
+            fetch(url, {
+                method: 'DELETE'
             })
-
+                .then(res => res.json())
+                .then(data => {
+                    if (data.deletedCount > 0) {
+                        alert('Booking canceled!');
+                        window.location.reload();
+                    }
+                })
+        }
     }
 
     return (

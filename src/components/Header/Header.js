@@ -26,6 +26,7 @@ const Header = () => {
                                 user.displayName && <Nav>
                                     <NavLink className="navLink" to="/addnewdeal">Add a New Deal</NavLink>
                                     <NavLink className="navLink" to="/mybookings">My Bookings</NavLink>
+                                    <NavLink className="navLink" to="/manageallbookings">Manage All Bookings</NavLink>
                                     <button className="user-name text-warning" >{user.displayName}</button>
                                 </Nav>
                             }
