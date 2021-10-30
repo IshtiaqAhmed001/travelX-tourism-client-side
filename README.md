@@ -7,7 +7,7 @@ Travelx provides the best sevrices within the most reasonable price.We are offer
 This website has 7 pages.Some pages are public and some are protected,which means user needs to be logged in to access those pages/features.
 
 
-First Header        | Second Header
+Pages               | Details
 -------------       | -------------
 Home                | main landing page includes slider,featured offers etc..
 Destinations        | shows the available tour destinations
