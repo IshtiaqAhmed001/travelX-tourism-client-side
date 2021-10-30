@@ -34,7 +34,7 @@ const MyBookings = () => {
     return (
         <div>
             <h1>Total Bookings on website: {orders.length}</h1>
-            <h2>My Bookings: {myBookings.length}</h2>
+            <h2 className="my-5">My Bookings: {myBookings.length}</h2>
 
             <div className="row g-4">
                 {myBookings.map(booking => <div key={booking._id} className="col-lg-4 col-md-6 col-sm-12">

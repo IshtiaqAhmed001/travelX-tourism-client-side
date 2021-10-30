@@ -19,7 +19,7 @@ const DealDetails = () => {
     const onSubmit = data => {
         const { name, email, address, city, phone } = data;
 
-        let newOrder = { orderId, name, email, address, city, phone };
+        let newOrder = { orderId, status: 'pending', name, email, address, city, phone };
         newOrder.itemDetails = singleDeal[0];
 
         fetch('http://localhost:5000/bookings', {
@@ -46,9 +46,7 @@ const DealDetails = () => {
                 <div className="">
                     {singleDeal.map(deal => <div key={deal._id} className="">
                         <img className="w-25" src={deal.img} alt="" />
-                        <h3 className="w-100 bg-primary p-2 rounded-3 text-white">{deal.name}</h3>
-                        <button className="btn btn-warning w-100 fw-bold"><h3>Book Now</h3></button>
-
+                        <h3 className="w-25 mx-auto bg-primary p-2 rounded-3 text-white">{deal.name}</h3>
                     </div>)}
                 </div>
             </div>
