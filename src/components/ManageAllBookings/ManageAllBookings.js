@@ -10,7 +10,7 @@ const ManageAllBookings = () => {
     const handleCancelBooking = id => {
         const proceed = window.confirm('Are you sure you want to delete ?');
         if (proceed) {
-            const url = `http://localhost:5000/bookings/${id}`;
+            const url = `https://shrouded-meadow-59563.herokuapp.com/bookings/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
@@ -30,7 +30,7 @@ const ManageAllBookings = () => {
 
         console.log(updatedOrder)
 
-        const url = `http://localhost:5000/manageallorders/${id}`;
+        const url = `https://shrouded-meadow-59563.herokuapp.com/manageallorders/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {

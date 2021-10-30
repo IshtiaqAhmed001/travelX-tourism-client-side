@@ -6,7 +6,7 @@ const Destinations = () => {
     const [destinations, setDestinations] = useState([]);
     const { isLoading } = useAuth();
     useEffect(() => {
-        fetch('http://localhost:5000/destinations')
+        fetch('https://shrouded-meadow-59563.herokuapp.com/destinations')
             .then(res => res.json())
             .then(data => setDestinations(data))
     }, []);

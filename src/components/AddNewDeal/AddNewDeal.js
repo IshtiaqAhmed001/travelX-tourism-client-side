@@ -8,7 +8,7 @@ const AddNewDeal = () => {
         const { name, price, destination, img } = data;
         const newDeal = { name, price, destination, img };
 
-        fetch('http://localhost:5000/packages', {
+        fetch('https://shrouded-meadow-59563.herokuapp.com/packages', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

@@ -22,7 +22,7 @@ const DealDetails = () => {
         let newOrder = { orderId, status: 'pending', name, email, address, city, phone };
         newOrder.itemDetails = singleDeal[0];
 
-        fetch('http://localhost:5000/bookings', {
+        fetch('https://shrouded-meadow-59563.herokuapp.com/bookings', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
