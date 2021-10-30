@@ -13,9 +13,7 @@ const MyBookings = () => {
     }, []);
 
 
-
     const myBookings = orders.filter(order => order.email === user.email);
-
 
     return (
         <div>

@@ -1,15 +1,24 @@
 import React from 'react';
-import { Carousel } from 'react-bootstrap';
+import { Carousel, Spinner } from 'react-bootstrap';
 import useDeals from '../../hooks/useDeals';
 import Deal from '../Deal/Deal';
 import img1 from '../../images/slider/friends.jpg';
 import img2 from '../../images/slider/maldives.jpg';
 import img3 from '../../images/slider/surf.jpg';
 import img4 from '../../images/slider/concert.jpg';
+import useAuth from '../../hooks/useAuth';
 
 
 const Home = () => {
     const { deals } = useDeals();
+    const { isLoading } = useAuth();
+    if (isLoading) {
+        return <div class="text-center">
+            <Spinner animation="border" role="status">
+                <span className="visually-hidden">Loading...</span>
+            </Spinner>
+        </div>
+    }
     return (
         <div >
             <div className="slider">
