@@ -4,7 +4,6 @@ import useDeals from '../../hooks/useDeals';
 import { useForm } from 'react-hook-form';
 import useAuth from '../../hooks/useAuth';
 
-
 const DealDetails = () => {
     const { id } = useParams();
     const { deals } = useDeals();
@@ -42,12 +41,14 @@ const DealDetails = () => {
     return (
         <div>
 
-            <div className="services container ">
+            <div className="services  ">
                 <div className="">
                     {singleDeal.map(deal => <div key={deal._id} className="">
-
-                        <img className="w-50" src={deal.img} alt="" />
-                        <h3 className="w-50 mx-auto bg-primary p-2 rounded-3 text-white">{deal.name}</h3>
+                        <h1 className="display-5 mx-auto p-2 ">{deal.name}</h1>
+                        <img className="w-100" src={deal.coverImg} alt="" />
+                        <h3 className="text-start">{deal.destination}</h3>
+                        <h5 className="text-start slogan">Price: {deal.price}/per person</h5>
+                        <h6 className="text-start slogan">Visa: {deal.visa}</h6>
                     </div>)}
                 </div>
             </div>

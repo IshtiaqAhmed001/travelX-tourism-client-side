@@ -5,8 +5,8 @@ const AddNewDeal = () => {
     const { register, handleSubmit, watch, formState: { errors }, reset } = useForm();
 
     const onSubmit = data => {
-        const { name, price, destination, img } = data;
-        const newDeal = { name, price, destination, img };
+        const { name, price, destination, img, coverImg, visa } = data;
+        const newDeal = { name, price, destination, img, coverImg, visa };
 
         fetch('https://shrouded-meadow-59563.herokuapp.com/packages', {
             method: 'POST',
@@ -38,6 +38,10 @@ const AddNewDeal = () => {
                     <input className="form-control" placeholder="Price "  {...register("price", { required: true })} />
                     <br />
                     <input className="form-control" placeholder="Image URL "  {...register("img", { required: true })} />
+                    <br />
+                    <input className="form-control" placeholder="Cover Img URL "  {...register("coverImg", { required: true })} />
+                    <br />
+                    <input className="form-control" placeholder="Visa needed or not ?"  {...register("visa", { required: true })} />
                     <br />
 
                     {errors.exampleRequired && <span>This field is required</span>}
