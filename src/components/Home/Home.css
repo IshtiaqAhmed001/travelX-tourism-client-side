@@ -1,0 +1,24 @@
+/* google fonts  */
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+.slider-title{
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 100px;
+    margin: 200px 0;
+    
+   
+}
+
+.title1{
+    color:#2125299a ;
+}
+.title2{
+    color:#212529cd ;
+}
+.title3{
+    color:#0590bfc2 ;
+}
+.title4{
+    color:#bb430cd9;
+
+}

@@ -7,6 +7,7 @@ import img2 from '../../images/slider/maldives.jpg';
 import img3 from '../../images/slider/surf.jpg';
 import img4 from '../../images/slider/concert.jpg';
 import useAuth from '../../hooks/useAuth';
+import './Home.css';
 
 
 const Home = () => {
@@ -30,8 +31,8 @@ const Home = () => {
                             alt="First slide"
                         />
                         <Carousel.Caption>
-                            <h3>First slide label</h3>
-                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                            <h3 className="slider-title title1" >Making the most out of your holiday</h3>
+                            <p className="text-dark fs-5">TravelX, providing the best packages for friends and family</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
@@ -42,8 +43,8 @@ const Home = () => {
                         />
 
                         <Carousel.Caption>
-                            <h3>Second slide label</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <h3 className="slider-title title2" >Picture perfect destinations</h3>
+                            <p className="fs-5">Enjoy the best sunsets with us</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
@@ -54,8 +55,8 @@ const Home = () => {
                         />
 
                         <Carousel.Caption>
-                            <h3>Third slide label</h3>
-                            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                            <h3 className="slider-title title3" >Beauty of Discovery</h3>
+                            <p className="text-dark fs-5">Explore and get the best out of yourself</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
@@ -66,8 +67,8 @@ const Home = () => {
                         />
 
                         <Carousel.Caption>
-                            <h3>Third slide label</h3>
-                            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                            <h3 className="slider-title title4" >Experience different cultures </h3>
+                            <p className="fs-5">Enjoy the best of the cultures</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                 </Carousel>
