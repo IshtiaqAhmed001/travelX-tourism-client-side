@@ -13,7 +13,7 @@ const Destinations = () => {
 
     if (isLoading) {
         return <div className="text-center">
-            <Spinner animation="border" role="status">
+            <Spinner className="my-5" animation="border" role="status">
                 <span className="visually-hidden">Loading...</span>
             </Spinner>
         </div>

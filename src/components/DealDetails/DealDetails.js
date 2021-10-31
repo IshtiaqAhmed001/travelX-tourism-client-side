@@ -45,8 +45,9 @@ const DealDetails = () => {
             <div className="services container ">
                 <div className="">
                     {singleDeal.map(deal => <div key={deal._id} className="">
-                        <img className="w-25" src={deal.img} alt="" />
-                        <h3 className="w-25 mx-auto bg-primary p-2 rounded-3 text-white">{deal.name}</h3>
+
+                        <img className="w-50" src={deal.img} alt="" />
+                        <h3 className="w-50 mx-auto bg-primary p-2 rounded-3 text-white">{deal.name}</h3>
                     </div>)}
                 </div>
             </div>
@@ -55,22 +56,22 @@ const DealDetails = () => {
             <div className="my-1">
                 <h1>Please procees to confirm</h1>
 
-                <form className="shipping-form" onSubmit={handleSubmit(onSubmit)}>
-                    <input defaultValue={user.displayName} {...register("name")} />
+                <form className="my-5 w-75 mx-auto border border-1 p-5 border-warning" onSubmit={handleSubmit(onSubmit)}>
+                    <input className="form-control" defaultValue={user.displayName} {...register("name")} />
                     <br />
 
-                    <input defaultValue={user.email} {...register("email", { required: true })} />
+                    <input className="form-control" defaultValue={user.email} {...register("email", { required: true })} />
                     <br />
                     {errors.email && <span className="error">This field is required</span>}
-                    <input placeholder="Address" defaultValue="" {...register("address")} />
+                    <input className="form-control" placeholder="Address" defaultValue="" {...register("address")} />
                     <br />
-                    <input placeholder="City" defaultValue="" {...register("city")} />
+                    <input className="form-control" placeholder="City" defaultValue="" {...register("city")} />
                     <br />
-                    <input placeholder="Phone" defaultValue="" {...register("phone")} />
+                    <input className="form-control" placeholder="Phone" defaultValue="" {...register("phone")} />
                     <br />
-                    <br />
-                    <input value="book" type="submit" />
+                    <input className="btn btn-lg btn-warning" value="Click to Book" type="submit" />
                 </form>
+
             </div>
 
         </div>
