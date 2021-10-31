@@ -26,3 +26,23 @@
 .slogan{
     color: #FF681A;
 }
+
+.offer-img{
+    opacity: 1.5;
+   
+}
+.offer-section{
+    background: url('https://i.ibb.co/68kM2nB/bungee-offer.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow:inset 0 0 0 2000px rgba(247, 152, 28, 0.679);
+}
+.discount-price{
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 300px;
+    color: whitesmoke;
+}
+.offer-brief{
+    text-align: start;
+    color: whitesmoke;
+}
