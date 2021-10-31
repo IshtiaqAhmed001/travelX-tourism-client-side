@@ -1,11 +1,8 @@
-import React, { useState } from 'react';
 import { Table } from 'react-bootstrap';
-import useAuth from '../../hooks/useAuth';
 import useOrders from '../../hooks/useOrders';
 
 const ManageAllBookings = () => {
-    const { user } = useAuth();
-    const { orders, setOrders } = useOrders();
+    const { orders } = useOrders();
 
     // cancel booking 
     const handleCancelBooking = id => {
