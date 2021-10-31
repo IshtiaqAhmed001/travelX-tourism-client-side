@@ -22,4 +22,8 @@ To build this projet we used React,which is a JavaScript Library. We also implem
 And lastly for storing data we used mongodb which is a nosql database.
 
 
-### Live site link:
+### Live client site link:
+https://travelx-49c24.web.app/
+
+### Live server site link:
+https://shrouded-meadow-59563.herokuapp.com/
