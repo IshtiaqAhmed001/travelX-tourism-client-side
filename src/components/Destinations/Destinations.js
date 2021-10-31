@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Spinner } from 'react-bootstrap';
+import { Button, Card, Spinner } from 'react-bootstrap';
 import useAuth from '../../hooks/useAuth';
 
 const Destinations = () => {
@@ -12,7 +12,7 @@ const Destinations = () => {
     }, []);
 
     if (isLoading) {
-        return <div class="text-center">
+        return <div className="text-center">
             <Spinner animation="border" role="status">
                 <span className="visually-hidden">Loading...</span>
             </Spinner>
@@ -20,17 +20,20 @@ const Destinations = () => {
     }
 
     return (
-        <div className="container">
-            <h2>THis is destinations</h2>
+        <div className="container my-5">
+            <h1 className="display-5 mb-5 section-title"> Top Destinations You Must Visit</h1>
             <div className="row g-4">
                 {destinations.map(destination => <div className="col-lg-2 col-md-3 col-sm-6">
-                    <div className="img-container">
-                        <img className="w-100" src={destination.img} alt="" />
+                    <div className="card h-100">
+                        <img className="card-img-top w-100" src={destination.img} alt="..." />
+                        <div className="card-body">
+                            <h5 className="card-title">{destination.name}</h5>
+                            <p className="card-text text-start"><small>{destination.description}</small></p>
+                        </div>
                     </div>
-                    <h3>{destination.name}</h3>
-                    <h6>{destination.description}</h6>
                 </div>)}
             </div>
+
         </div>
     );
 };

@@ -7,12 +7,6 @@ import './Home.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTelegramPlane } from '@fortawesome/free-brands-svg-icons';
 import { faCampground, faMapMarkerAlt, faPencilAlt, faStar } from '@fortawesome/free-solid-svg-icons';
-import h1 from '../../images/hotels/1.jpg';
-import h2 from '../../images/hotels/2.jpg';
-import h3 from '../../images/hotels/3.jpg';
-
-
-
 
 
 const Home = () => {
@@ -170,13 +164,13 @@ const Home = () => {
                 <div className="col-lg-7 col-md-12">
                     <div className="row g-1">
                         <div className="col-lg-4 col-md-12">
-                            <img className="w-100" src={h1} alt="" />
+                            <img className="w-100" src="https://i.ibb.co/MD6zGYF/1.jpg" alt="" />
                         </div>
                         <div className="col-lg-4 col-md-12">
-                            <img className="w-100" src={h2} alt="" />
+                            <img className="w-100" src="https://i.ibb.co/0s4YS21/2.jpg" alt="" />
                         </div>
                         <div className="col-lg-4 col-md-12">
-                            <img className="w-100" src={h3} alt="" />
+                            <img className="w-100" src="https://i.ibb.co/dDFDSpv/3.jpg" alt="" />
                         </div>
 
                     </div>
