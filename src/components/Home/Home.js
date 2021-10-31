@@ -73,8 +73,9 @@ const Home = () => {
                     </Carousel.Item>
                 </Carousel>
             </div>
-            <div className="container">
-                <h1 className="display-5 my-5"> Explore the World with Us</h1>
+            <div className="container my-5">
+                <h6 className="slogan">Travel Save Repeat</h6>
+                <h1 className="display-5 mb-5"> Explore the World with Us</h1>
                 <p className="text-success fs-3">Trending Packages</p>
                 <div className="row g-4 mb-5">
                     {
