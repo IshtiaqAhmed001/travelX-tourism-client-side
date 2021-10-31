@@ -5,8 +5,6 @@
     font-family: 'Shadows Into Light', cursive;
     font-size: 100px;
     margin: 200px 0;
-    
-   
 }
 
 .title1{
@@ -39,10 +37,33 @@
 }
 .discount-price{
     font-family: 'Shadows Into Light', cursive;
-    font-size: 300px;
+    font-size:300px;
     color: whitesmoke;
 }
 .offer-brief{
     text-align: start;
+    color: whitesmoke;
+}
+.video-player{
+    width: 100vw;
+    height:100vh;
+ }
+ .additional-services{
+     background-color: rgba(245, 255, 179, 0.426);
+ }
+
+.icon-container{
+    /* width: 50%; */
+    background-color:darkorange ;
+    border-radius: 50%;
+    padding: 50px 0;
+    transition: transform .9s;
+}
+.icon-container:hover{
+    border:3px solid rgb(255, 115, 8);
+    transform: scale(1.05);
+}
+.services-icons{
+    font-size: 3em;
     color: whitesmoke;
 }
