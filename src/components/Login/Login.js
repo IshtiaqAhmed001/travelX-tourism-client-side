@@ -62,14 +62,14 @@ const Login = () => {
     return (
         <div>
             <div>
-                <h2>THis is login</h2>
+                <h2 className="display-4 my-4">Please login to continue</h2>
                 <div>
-                    <form onSubmit={handleLoginWithEmailandPassword}>
-                        <input type="email" onBlur={handleGetEmail} placeholder="Email" />
+                    <form className="w-75 mx-auto border border-1 border-warning p-5" onSubmit={handleLoginWithEmailandPassword}>
+                        <input className="form-control" type="email" onBlur={handleGetEmail} placeholder="Email" />
                         <br />
-                        <input type="password" onBlur={handleGetPassword} placeholder="Password" />
+                        <input className="form-control" type="password" onBlur={handleGetPassword} placeholder="Password" />
                         <br />
-                        <input type="submit" value="Login" />
+                        <input className="btn btn-warning btn-lg" type="submit" value="Login" />
                     </form>
                 </div>
 
@@ -78,8 +78,8 @@ const Login = () => {
                 </div>
             </div>
             <div className="my-5">
-                <h4>New User?</h4>
-                <Link to="/register">Please Register</Link>
+                <h4 className="display-6 slogan my-4">Not Registered ?</h4>
+                <Link className="fs-5 fw-bold" to="/register">Please Register</Link>
             </div>
         </div>
     );

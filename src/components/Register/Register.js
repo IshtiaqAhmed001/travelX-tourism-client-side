@@ -49,37 +49,23 @@ const Register = () => {
         e.preventDefault();
     }
 
-
-    // // sign in using google directly
-    // const handleGoogleSignIn = () => {
-    //     signInWithGoogle()
-    //         .then(res => {
-    //             setIsLoading(true);
-    //             setUser(res.user);
-    //             history.push(url);
-    //         })
-    //         .catch(err => console.log(err))
-    //         .finally(() => {
-    //             setIsLoading(false);
-    //         })
-    // }
     return (
         <div>
-            <h2 className="my-5">Please Register</h2>
+            <h2 className="my-5 display-4">Please Register</h2>
             <div>
-                <form onSubmit={handleRegistration} >
-                    <input type="text" onBlur={handleGetName} placeholder="Name" />
+                <form className="my-5 w-75 mx-auto border border-1 border-warning p-5" onSubmit={handleRegistration} >
+                    <input className="form-control " type="text" onBlur={handleGetName} placeholder="Name" />
                     <br />
-                    <input type="email" onBlur={handleGetEmail} placeholder="Email" />
+                    <input className="form-control " type="email" onBlur={handleGetEmail} placeholder="Email" />
                     <br />
-                    <input type="password" onBlur={handleGetPassword} placeholder="Password" />
+                    <input className="form-control " type="password" onBlur={handleGetPassword} placeholder="Password" />
                     <br />
-                    <input type="submit" value="Register" />
+                    <input className="btn btn-warning btn-lg " type="submit" value="Register" />
                 </form>
             </div>
-            <div className="mb-5">
-                <h3 className="mt-5">Already Registered ?</h3>
-                <Link to="/login">Please Login</Link>
+            <div className="my-5">
+                <h3 className="mt-5 display-6">Already Registered ?</h3>
+                <Link className="fs-5 fw-bold" to="/login">Please Login</Link>
             </div>
 
         </div>
