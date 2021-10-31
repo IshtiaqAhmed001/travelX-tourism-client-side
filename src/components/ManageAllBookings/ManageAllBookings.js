@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Table } from 'react-bootstrap';
 import useAuth from '../../hooks/useAuth';
 import useOrders from '../../hooks/useOrders';
 
@@ -50,9 +51,40 @@ const ManageAllBookings = () => {
 
     return (
         <div>
-            <h1 className="my-5">Total Bookings on website: {orders.length}</h1>
+            <h1 className="display-5 mt-5">Total Bookings on website: {orders.length}</h1>
+            <hr className="w-50 mx-auto mb-5" />
 
-            <div className="row h-100 mx-auto g-4">
+            <div>
+                <Table responsive="sm">
+                    <thead>
+                        <tr>
+                            <th>Package Name</th>
+                            <th>Destination</th>
+                            <th>Price</th>
+                            <th>Booked By</th>
+                            <th>Order Status</th>
+                            <th>Update Status</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            orders.map(order => < tr >
+                                <td>{order.itemDetails.name}</td>
+                                <td>{order.itemDetails.destination}</td>
+                                <td>{order.itemDetails.price}</td>
+                                <td>{order.email}</td>
+                                <td><strong>{order.status}</strong></td>
+                                <td><button onClick={() => handleCancelBooking(order._id)} className="btn btn-warning  fw-bold">Cancel Booking</button></td>
+                                <td><button onClick={() => handleUpdateOrderStatus(order._id)} className="btn btn-success">Update Order Status</button></td>
+                            </tr>)
+                        }
+                    </tbody>
+                </Table>
+            </div>
+
+
+            {/* <div className="row h-100 mx-auto g-4">
                 {orders.map(order => <div key={order._id} className="col-lg-2 col-md-3 col-sm-4 col-12">
                     <div className="img-container">
                         <img className="w-75" src={order.itemDetails.img} alt="" />
@@ -66,8 +98,8 @@ const ManageAllBookings = () => {
                     <button onClick={() => handleCancelBooking(order._id)} className="btn btn-warning fw-bold"><h3>Cancel Booking</h3></button>
                     <button onClick={() => handleUpdateOrderStatus(order._id)} className="btn btn-success">Update Order Status</button>
                 </div>)}
-            </div>
-        </div>
+            </div> */}
+        </div >
     );
 };
 
