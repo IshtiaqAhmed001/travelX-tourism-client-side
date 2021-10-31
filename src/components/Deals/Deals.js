@@ -19,8 +19,8 @@ const Deals = () => {
 
 
     return (
-        <div>
-            <h2 className="my-5 display-1 text-dark">All deals</h2>
+        <div className="container my-4">
+            <h1 className="display-5 mb-5 section-title"> Deals we are currently offering</h1>
             <div className="row g-4 mb-5">
                 {
                     deals.map(deal => <Deal

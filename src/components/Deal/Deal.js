@@ -17,10 +17,11 @@ const Deal = ({ deal }) => {
                 <img className="w-100" src={img} alt="" />
             </div>
             <h3>{name}</h3>
-            <h6>{destination}</h6>
-            <button onClick={() => handleViewDetails(_id)} className="btn btn-primary">Book Now</button>
-            <p>Price: {price}</p>
-        </div>
+            <h5>{destination}</h5>
+            <h6>Price: {price}</h6>
+            <button onClick={() => handleViewDetails(_id)} className="btn btn-warning"><strong>Book Now</strong></button>
+
+        </div >
 
     );
 };

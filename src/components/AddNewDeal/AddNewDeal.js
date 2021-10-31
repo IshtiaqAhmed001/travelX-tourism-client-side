@@ -25,29 +25,24 @@ const AddNewDeal = () => {
     }
 
 
-
-
-
-
-
     return (
         <div >
-            <h2>Add a new deal</h2>
-            <div>
+            <h2 className="display-6 fw-bold mt-5">Add a New Deal</h2>
+            <div className="w-75 mx-auto my-5">
                 <form onSubmit={handleSubmit(onSubmit)}>
 
-                    <input placeholder="Deal Name "  {...register("name", { required: true })} />
+                    <input className="form-control" placeholder="Deal Name "  {...register("name", { required: true })} />
                     <br />
-                    <input placeholder="Destination "  {...register("destination", { required: true })} />
+                    <input className="form-control" placeholder="Destination "  {...register("destination", { required: true })} />
                     <br />
-                    <input placeholder="Price "  {...register("price", { required: true })} />
+                    <input className="form-control" placeholder="Price "  {...register("price", { required: true })} />
                     <br />
-                    <input placeholder="Image URL "  {...register("img", { required: true })} />
+                    <input className="form-control" placeholder="Image URL "  {...register("img", { required: true })} />
                     <br />
 
                     {errors.exampleRequired && <span>This field is required</span>}
 
-                    <input value="Add" type="submit" />
+                    <input className="btn btn-lg btn-warning p-2 w-25" value="Add Deal" type="submit" />
                 </form>
             </div>
         </div>

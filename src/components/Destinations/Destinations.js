@@ -21,7 +21,8 @@ const Destinations = () => {
 
     return (
         <div className="container my-5">
-            <h1 className="display-5 mb-5 section-title"> Top Destinations You Must Visit</h1>
+            <h1 className="display-5 section-title"> Top Destinations You Must Visit</h1>
+            <hr className="mb-5 w-75 mx-auto" />
             <div className="row g-4">
                 {destinations.map(destination => <div className="col-lg-2 col-md-3 col-sm-6">
                     <div className="card h-100">
